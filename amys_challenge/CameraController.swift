@@ -10,7 +10,6 @@ import UIKit
 import AVFoundation
 
 class CameraController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    // can receive data from input devices such as videoInput
 //    var captureSession: AVCaptureSession?
 //    
 //    // used to display a preview of the data that is coming in from captureSession's input device
@@ -103,6 +102,7 @@ class CameraController: UIViewController, UINavigationControllerDelegate, UIImag
                         imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
                         self.presentViewController(imagePicker, animated: true, completion: nil)
                     }
+        print("Hel")
     }
 }
 

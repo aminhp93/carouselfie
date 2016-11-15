@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ItemViewController: UIViewController {
+class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     weak var CBDelegate: CancelButtonDelegate?
     var editItem: [String] = []
@@ -56,5 +56,33 @@ class ItemViewController: UIViewController {
             addDel?.itemViewController(self, didFinishAddingItem: item)
         }
     }
+    
+    
+    @IBAction func cameraButton(sender: AnyObject) {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.sourceType = UIImagePickerControllerSourceType.Camera
+        pickerController.allowsEditing = true
+        
+        self.presentViewController(pickerController, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func libraryButton(sender: AnyObject) {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        pickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        pickerController.allowsEditing = true
+        
+        self.presentViewController(pickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        self.itemImage.image = image
+    }
+    
     
 }

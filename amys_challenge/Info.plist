@@ -24,6 +24,8 @@
 	<string>LaunchScreen</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Preview The Camera</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need to use library</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
