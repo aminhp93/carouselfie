@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A11CB10C1DD52E5A002FB966"
-               BuildableName = "amys_challenge.app"
-               BlueprintName = "amys_challenge"
-               ReferencedContainer = "container:amys_challenge.xcodeproj">
+               BuildableName = "Carouselfie.app"
+               BlueprintName = "Carouselfie"
+               ReferencedContainer = "container:Carouselfie.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A11CB1201DD52E5A002FB966"
-               BuildableName = "amys_challengeTests.xctest"
-               BlueprintName = "amys_challengeTests"
-               ReferencedContainer = "container:amys_challenge.xcodeproj">
+               BuildableName = "CarouselfieTests.xctest"
+               BlueprintName = "CarouselfieTests"
+               ReferencedContainer = "container:Carouselfie.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A11CB12B1DD52E5A002FB966"
-               BuildableName = "amys_challengeUITests.xctest"
-               BlueprintName = "amys_challengeUITests"
-               ReferencedContainer = "container:amys_challenge.xcodeproj">
+               BuildableName = "CarouselfieUITests.xctest"
+               BlueprintName = "CarouselfieUITests"
+               ReferencedContainer = "container:Carouselfie.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A11CB10C1DD52E5A002FB966"
-            BuildableName = "amys_challenge.app"
-            BlueprintName = "amys_challenge"
-            ReferencedContainer = "container:amys_challenge.xcodeproj">
+            BuildableName = "Carouselfie.app"
+            BlueprintName = "Carouselfie"
+            ReferencedContainer = "container:Carouselfie.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A11CB10C1DD52E5A002FB966"
-            BuildableName = "amys_challenge.app"
-            BlueprintName = "amys_challenge"
-            ReferencedContainer = "container:amys_challenge.xcodeproj">
+            BuildableName = "Carouselfie.app"
+            BlueprintName = "Carouselfie"
+            ReferencedContainer = "container:Carouselfie.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A11CB10C1DD52E5A002FB966"
-            BuildableName = "amys_challenge.app"
-            BlueprintName = "amys_challenge"
-            ReferencedContainer = "container:amys_challenge.xcodeproj">
+            BuildableName = "Carouselfie.app"
+            BlueprintName = "Carouselfie"
+            ReferencedContainer = "container:Carouselfie.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

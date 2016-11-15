@@ -18,7 +18,7 @@ class CarouselController: UIViewController, iCarouselDelegate, iCarouselDataSour
         super.awakeFromNib()
         print("Hello MInh")
 
-        imageArray = ["1.png", "2.png", "3.png"]
+        imageArray = ["sf1.jpg", "sf2.jpg", "sf3.jpg", "sf4.jpg", "sf5.jpg", "sf6.jpg", "sf7.jpg", "sf8.jpg", "sf9.jpg", "sf10.jpg", "sf11.jpg"]
         
     }
     

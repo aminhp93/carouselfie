@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:amys_challenge.xcodeproj">
+      location = "self:/Users/Jill/Desktop/Bootcamp_Work/Swift/carouselfie/Carouselfie.xcodeproj">
    </FileRef>
 </Workspace>

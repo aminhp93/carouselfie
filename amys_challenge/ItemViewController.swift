@@ -31,8 +31,8 @@ class ItemViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     override func viewDidLoad() {
         super.viewDidLoad()
         if editItem == [] {
-            itemLabel.text = ""
-            itemText.text = ""
+           // itemLabel.text = ""
+            //itemText.text = ""
         } else {
             itemLabel.text = editItem[0]
             itemText.text = editItem[1]
