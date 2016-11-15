@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,10 +28,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pW8-oJ-2lm">
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pW8-oJ-2lm">
                                             <rect key="frame" x="8" y="8" width="183" height="154"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BGj-84-YNW">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGj-84-YNW">
                                                     <rect key="frame" x="0.0" y="0.0" width="183" height="154"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="183" id="2cb-lt-wz1"/>
@@ -43,41 +44,29 @@
                                                 <constraint firstAttribute="height" constant="154" id="sg1-w3-SgW"/>
                                             </constraints>
                                         </stackView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3w-pf-mDp">
-                                            <rect key="frame" x="259" y="133" width="108" height="29"/>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3w-pf-mDp">
+                                            <rect key="frame" x="199" y="71" width="168" height="29"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="29" id="97v-c7-xMr"/>
                                                 <constraint firstAttribute="width" constant="108" id="liX-te-hiR"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <state key="normal" title="View description"/>
                                             <connections>
-                                                <action selector="DescriptionButtonPressed:" destination="Xa6-HF-QDO" eventType="touchUpInside" id="aYF-JM-9tl"/>
+                                                <action selector="DescriptionButtonPressed:" destination="Xa6-HF-QDO" eventType="touchUpInside" id="gwG-Wp-CKm"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BN-mc-KLV">
-                                            <rect key="frame" x="199" y="75" width="135" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="GiD-M4-QWg"/>
-                                                <constraint firstAttribute="width" constant="135" id="pwT-xu-2JH"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="5BN-mc-KLV" firstAttribute="leading" secondItem="H2F-Cj-ZhI" secondAttribute="leadingMargin" constant="191" id="0gj-HD-nMu"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="s3w-pf-mDp" secondAttribute="trailing" id="GKU-d7-5cL"/>
-                                        <constraint firstItem="5BN-mc-KLV" firstAttribute="top" secondItem="H2F-Cj-ZhI" secondAttribute="topMargin" constant="67" id="bFR-fU-OVg"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="s3w-pf-mDp" secondAttribute="bottom" constant="1" id="c9l-As-qoR"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="BGj-84-YNW" secondAttribute="leading" id="cVI-lb-e3p"/>
-                                        <constraint firstAttribute="topMargin" secondItem="BGj-84-YNW" secondAttribute="top" id="mGa-HJ-c6k"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="s3w-pf-mDp" secondAttribute="trailing" constant="60" id="2pY-PE-g79"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="s3w-pf-mDp" secondAttribute="bottom" constant="62" id="B9J-Sd-vre"/>
+                                        <constraint firstItem="s3w-pf-mDp" firstAttribute="top" secondItem="H2F-Cj-ZhI" secondAttribute="topMargin" constant="63" id="WRL-MN-LdF"/>
+                                        <constraint firstItem="s3w-pf-mDp" firstAttribute="leading" secondItem="pW8-oJ-2lm" secondAttribute="trailing" constant="8" id="qUa-J8-Uwn"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="CustomCellButton" destination="s3w-pf-mDp" id="ShW-QS-OEp"/>
                                     <outlet property="CustomCellImage" destination="BGj-84-YNW" id="ucj-m2-mXn"/>
-                                    <outlet property="CustomCellLabel" destination="5BN-mc-KLV" id="RC4-YN-4rX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -99,7 +88,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7uc-LJ-Nh1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816.79999999999995" y="157.87106446776613"/>
+            <point key="canvasLocation" x="356" y="28.335832083958024"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i0Q-O8-GyL">
@@ -117,7 +106,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7a1-oW-Qhj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-122.40000000000001" y="157.87106446776613"/>
+            <point key="canvasLocation" x="-430" y="28"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="7SE-1u-C8a">
@@ -131,26 +120,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="A4e-aN-3LW">
-                                <rect key="frame" x="67" y="385" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="A4e-aN-3LW" secondAttribute="height" multiplier="15:8" id="HAq-Dn-S2O"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdO-OY-ukb">
-                                <rect key="frame" x="155" y="534" width="65" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="2BD-ea-UCH"/>
-                                </constraints>
-                                <state key="normal" title="Update"/>
-                                <connections>
-                                    <action selector="updateButtonPressed:" destination="ikR-Dp-ZTI" eventType="touchUpInside" id="cDR-vB-YcP"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dr2-xp-vLQ">
                                 <rect key="frame" x="155" y="83" width="65" height="29"/>
                                 <constraints>
@@ -163,12 +132,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uaJ-9U-ZSn" firstAttribute="top" secondItem="KdO-OY-ukb" secondAttribute="bottom" constant="103" id="5cQ-Av-SUV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="A4e-aN-3LW" secondAttribute="trailing" constant="52" id="ErK-YD-xR0"/>
-                            <constraint firstItem="A4e-aN-3LW" firstAttribute="leading" secondItem="qML-7I-puX" secondAttribute="leadingMargin" constant="51" id="G56-X6-L8N"/>
-                            <constraint firstItem="KdO-OY-ukb" firstAttribute="top" secondItem="A4e-aN-3LW" secondAttribute="bottom" constant="21" id="Ova-cF-mCK"/>
-                            <constraint firstItem="KdO-OY-ukb" firstAttribute="centerX" secondItem="qML-7I-puX" secondAttribute="centerX" id="PxV-TE-ofu"/>
-                            <constraint firstItem="uaJ-9U-ZSn" firstAttribute="top" secondItem="A4e-aN-3LW" secondAttribute="bottom" constant="154" id="gEg-Aa-Sb9"/>
                             <constraint firstItem="dr2-xp-vLQ" firstAttribute="top" secondItem="AaY-1p-CFP" secondAttribute="bottom" constant="19" id="sTx-Fc-ay3"/>
                             <constraint firstItem="dr2-xp-vLQ" firstAttribute="centerX" secondItem="qML-7I-puX" secondAttribute="centerX" id="xpW-zY-GJ8"/>
                         </constraints>
@@ -183,15 +146,17 @@
                                 <action selector="cancelBarButtonPressed:" destination="ikR-Dp-ZTI" id="VA9-3z-oLU"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="TE6-Rj-s4X">
-                            <connections>
-                                <segue destination="2jW-Ej-KKd" kind="show" id="bwO-oT-mh9"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="TE6-Rj-s4X">
+                                <connections>
+                                    <segue destination="2jW-Ej-KKd" kind="show" id="bwO-oT-mh9"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photo Library" id="6QS-LX-LVG"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="DescriptionLabel" destination="dr2-xp-vLQ" id="rSP-jk-IZA"/>
-                        <outlet property="DescriptionText" destination="A4e-aN-3LW" id="wQZ-XH-KWd"/>
                         <outlet property="cancelBarButton" destination="jMw-9q-ACB" id="Lrh-IJ-3XC"/>
                         <outlet property="carouselView" destination="qML-7I-puX" id="lhS-H7-KQH"/>
                         <segue destination="fCu-nz-ue8" kind="presentation" identifier="UpdateItem" id="ynt-ia-3aj"/>
@@ -351,6 +316,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ynt-ia-3aj"/>
+        <segue reference="KOK-Mg-08b"/>
     </inferredMetricsTieBreakers>
 </document>

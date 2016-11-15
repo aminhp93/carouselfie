@@ -10,7 +10,7 @@ import UIKit
 
 class IndexViewController: UITableViewController, CustomCellDelegate, CancelButtonDelegate, addDelegate, editDelegate {
     
-    var items = [["Yosemite", "National park"], ["Grand Canyon", "Big hole in the ground"], ["Yellowstone", "Big volcano in the ground"]]
+    var items = [["San Francisco"], ["San Jose"], ["Los Angeles"], ["London"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +26,8 @@ class IndexViewController: UITableViewController, CustomCellDelegate, CancelButt
         print(cell.tag)
         print(indexPath.row)
         print("item \(items[indexPath.row])")
-        cell.CustomCellLabel?.text = items[indexPath.row][0]
-        cell.CustomCellImage.image = UIImage(named: (cell.CustomCellLabel?.text)!)
+        cell.CustomCellButton?.setTitle(items[indexPath.row][0], forState: .Normal)
+        cell.CustomCellImage.image = UIImage(named: items[indexPath.row][0])
         //cell.CustomCellText?.text = items[indexPath.row][1]
 
         return cell

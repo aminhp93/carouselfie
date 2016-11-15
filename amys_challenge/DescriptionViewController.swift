@@ -17,7 +17,7 @@ class DescriptionViewController: UIViewController, CancelButtonDelegate, updateD
     
     @IBOutlet weak var DescriptionLabel: UILabel!
 //    @IBOutlet weak var DescriptionImage: UIImageView!
-    @IBOutlet weak var DescriptionText: UITextView!
+//    @IBOutlet weak var DescriptionText: UITextView!
     weak var CBDelegate: CancelButtonDelegate?
     var viewItem: [String] = []
     var itemToEditIndexPath: Int?
@@ -39,8 +39,8 @@ class DescriptionViewController: UIViewController, CancelButtonDelegate, updateD
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        imageArray = ["1.png", "2.png", "3.png"]
         
+        imageArray = ["1.png", "2.png", "3.png"]
     }
 
     
@@ -52,7 +52,7 @@ class DescriptionViewController: UIViewController, CancelButtonDelegate, updateD
         var imageView: UIImageView!
         
         if view == nil{
-            imageView = UIImageView(frame: CGRectMake(0, 0 , 200, 200))
+            imageView = UIImageView(frame: CGRectMake(0, 0 , 300, 300))
             imageView.contentMode = .ScaleAspectFit
         } else {
             imageView = view as! UIImageView
@@ -69,9 +69,10 @@ class DescriptionViewController: UIViewController, CancelButtonDelegate, updateD
         print("hi")
         DescriptionLabel.text = viewItem[0]
 //        DescriptionImage.image = UIImage(named: (DescriptionLabel.text)!)
-        DescriptionText.text = viewItem[1]
-        carouselView.type = .TimeMachine
-
+//        DescriptionText.text = viewItem[1]
+        carouselView.type = .InvertedTimeMachine
+//        imageArray = ["1.png", "2.png", "3.png"]
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -113,7 +114,7 @@ class DescriptionViewController: UIViewController, CancelButtonDelegate, updateD
         print("Received in editingitem function in index view controller")
         DescriptionLabel.text = item[0]
 //        DescriptionImage.image = UIImage(named: (DescriptionLabel.text)!)
-        DescriptionText.text = item[1]
+//        DescriptionText.text = item[1]
         editDel?.descriptionViewController(self, didFinishEditingItem: item, atIndexPath: indexPath)
         
        /* items[indexPath] = item

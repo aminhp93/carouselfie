@@ -17,7 +17,7 @@ class CustomCell: UITableViewCell {
     
     @IBOutlet weak var CustomCellImage: UIImageView!
    
-    @IBOutlet weak var CustomCellLabel: UILabel!
+    @IBOutlet weak var CustomCellButton: UIButton!
     
     @IBAction func DescriptionButtonPressed(sender: UIButton) {
         print("button in custom cell clicked")
